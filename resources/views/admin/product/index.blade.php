@@ -10,7 +10,6 @@
               <tr>
                 <th>No</th>
                 <th>Name</th>
-                <th>images</th>
                 <th>Price</th>
                 <th>Description</th>
                 <th>Created_at</th>
@@ -19,19 +18,22 @@
               </tr>
             </thead>
             <tbody class="table-border-bottom-0">
+                @foreach ($product as $pro)
+
               <tr>
-              <td>1</td>
-              <td>iphone 14 Pro Max</td>
-              <td>iphone.jpg</td>
-              <td>45,990 บาท</td>
-              <td>ผลิตโดยบริษัทแอปเปิ้ล</td>
-              <td>2022-07-25 12:46:29</td>
-              <td>2022-07-25 12:46:29</td>
+              <td>{{ $pro->id }}</td>
+              <td>{{ $pro->name }}</td>
+              <td>{{ $pro->price }}</td>
+              <td>{{ $pro->description }}</td>
+              <td>{{ $pro->created_at }}</td>
+              <td>{{ $pro->updated_at }}</td>
+
               <td>
                 <a href="#"><i class='bx bxs-edit'></i></a>
                 <a href="#"><i class='bx bx-trash'></i></a>
               </td>
               </tr>
+              @endforeach
             </tbody>
           </table>
         </div>

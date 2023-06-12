@@ -30,3 +30,4 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('admin/product/index',[ProductController::class, 'index'])->name('pro.index');
 Route::get('admin/product/create',[ProductController::class, 'create'])->name('por.create');
+route::post('admin/product/insert',[ProductController::class, 'insert']);
