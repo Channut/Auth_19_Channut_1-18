@@ -46,6 +46,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
         <div class="layout-container">
@@ -58,7 +59,7 @@
                         <img src="{{ asset('backend/assets/img/logoicon.png')}}" alt="">
                         </span>
                         <span class="app-brand-text demo menu-text fw-bolder ms-2">
-                            IT Shop
+                        love
                         </span>
                     </a>
 

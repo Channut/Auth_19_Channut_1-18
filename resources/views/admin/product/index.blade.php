@@ -21,21 +21,26 @@
                 @foreach ($product as $pro)
 
               <tr>
-              <td>{{ $pro->id }}</td>
+              <td>{{ $product->firstItem() + $loop->index }}</td>
               <td>{{ $pro->name }}</td>
-              <td>{{ $pro->price }}</td>
-              <td>{{ $pro->description }}</td>
+              <td>{{ number_format($pro->price) ." บาท" }}</td>
+              <td>{{ Str::limit($pro->description, 15) }}</td>
               <td>{{ $pro->created_at }}</td>
               <td>{{ $pro->updated_at }}</td>
 
               <td>
-                <a href="#"><i class='bx bxs-edit'></i></a>
-                <a href="#"><i class='bx bx-trash'></i></a>
+                <a href="{{ url('admin/product/edit/'.$pro->id) }}"><i class='bx bxs-edit'></i></a>
+                <a href="{{ url('admin/product/delete/'.$pro->id) }}"><i class='bx bx-trash'></i></a>
               </td>
               </tr>
               @endforeach
             </tbody>
           </table>
+        </div>
+        <div class="container">
+          <div class="row mt-4">
+              {{ $product->links('pagination::bootstrap-5') }}
+          </div>
         </div>
       </div>
     </div>
