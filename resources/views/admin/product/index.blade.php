@@ -12,6 +12,7 @@
                 <th>Name</th>
                 <th>Price</th>
                 <th>Description</th>
+                <th>Image</th>
                 <th>Created_at</th>
                 <th>Updated_at</th>
                 <th>Actions</th>
@@ -25,6 +26,7 @@
               <td>{{ $pro->name }}</td>
               <td>{{ number_format($pro->price) ." บาท" }}</td>
               <td>{{ Str::limit($pro->description, 15) }}</td>
+              <td><img src="{{ asset('backend/img/img_pro/'.$pro->image) }}" alt="" width="250"></td>
               <td>{{ $pro->created_at }}</td>
               <td>{{ $pro->updated_at }}</td>
 

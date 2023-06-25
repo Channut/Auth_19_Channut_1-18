@@ -7,7 +7,7 @@
                                 <h5 class="card-header">Product</h5>
                                 <div class="card-body">
                                   <div>
-                                    <form action="{{ url('admin/product/insert') }}" method="post">
+                                    <form action="{{ url('admin/product/insert') }}" method="post" enctype="multipart/form-data">
                                         @csrf
                                     <label for="defaultFormControlInput" class="form-label">Name</label>
                                     <input
@@ -49,11 +49,12 @@
                                     </select> -->
 
 
-                                    <!-- <label for="defaultFormControlInput" class="form-label">Images</label>
+                                    <label for="defaultFormControlInput" class="form-label">Images</label>
                                       <div class="input-group">
-                                        <input type="file" class="form-control" id="inputGroupFile02" />
+                                        <input type="file" name="images" class="form-control" id="inputGroupFile02" />
                                         <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                                      </div> -->
+                                      </div>
+
 
 
                                     <input type="submit" class="btn btn-primary mt-3" value="บันทึก">
@@ -65,4 +66,5 @@
                             </div>
                           </div>
                         </div>
+
 @endsection

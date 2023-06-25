@@ -43,20 +43,17 @@
                                       value="{{ $product->descriotion }}"
                                     />
 
-                                    <!-- <label for="exampleFormControlSelect1" class="form-label">Category</label>
-                                    <select class="form-select" id="exampleFormControlSelect1" aria-label="Default select example">
-                                      <option selected>กรุณาเลือกประเภทสินค้า</option>
-                                      <option value="1">โทรศัพท์มือถือ</option>
-                                      <option value="2">โน๊ตบุ๊ค</option>
-                                      <option value="3">คอมพิวเตอร์ตั้งโต๊ะ</option>
-                                    </select> -->
 
-
-                                    <!-- <label for="defaultFormControlInput" class="form-label">Images</label>
+                                    <label for="defaultFormControlInput" class="form-label">Images</label>
                                       <div class="input-group">
-                                        <input type="file" class="form-control" id="inputGroupFile02" />
+                                        <input type="file" name="images" class="form-control" id="inputGroupFile02" />
                                         <label class="input-group-text" for="inputGroupFile02">Upload</label>
-                                      </div> -->
+                                      </div>
+                                    <div class="row mt-3">
+                                         <div class="col-6">
+                                            <img src="{{ asset('backend/img/img_pro/'.$product->image) }}" width="250" height="150" alt="">
+                                        </div>
+                                    </div>
 
 
                                     <input type="submit" class="btn btn-primary mt-3" value="บันทึก">
